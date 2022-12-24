@@ -1,0 +1,15 @@
+int hero = 10;
+int monster = 10;
+int attack = 0;
+Random random = new Random();
+
+while(hero > 0 && monster > 0){
+     attack = random.Next(1,11);
+     monster -= attack;
+     Console.WriteLine($"Monster lost {attack} health points now monster has {monster} points");
+    if(monster <= 0) continue;
+    attack = random.Next(1,11);
+    hero -= attack;
+    Console.WriteLine($"Hero was damaged and lost {attack} health and now has {hero} health.");
+}
+Console.WriteLine(hero > monster ? "Hero wins" : "Monster Wins");
