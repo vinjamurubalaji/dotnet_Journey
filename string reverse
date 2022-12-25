@@ -1,0 +1,11 @@
+string pangram = "The quick brown fox jumps over the lazy dog";
+
+string [] message = pangram.Split(' ');
+string[] newmessage = new string[message.Length];
+for(int i=0; i< message.Length; i++){
+    char [] letters = message[i].ToCharArray();
+    Array.Reverse(letters);
+    newmessage[i]= new string(letters);
+}
+string results = string.Join(" ",newmessage);
+Console.WriteLine(results);
